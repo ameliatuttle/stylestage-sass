@@ -4,7 +4,7 @@
   --color-primary-alt: #fdd26f;
   --color-secondary: #add422;
   --color-background: #ebfbd2;
-  --color-text: #864e2d;
+  --color-text: rgb(133.875, 77.525, 44.625);
   --color-light: #fff;
   --color-anchor: #ff5e00;
   --font-family: "Handjet", serif;
@@ -274,7 +274,7 @@ nav ul li {
 }
 @media (min-width: 515px) and (max-width: 765px) {
   #styles .features li:nth-last-child(1):nth-child(odd),
-.features.patterned li:nth-last-child(1):nth-child(odd) {
+  .features.patterned li:nth-last-child(1):nth-child(odd) {
     grid-column: span 2;
   }
 }
@@ -301,3 +301,5 @@ nav ul li {
   font-size: 0.9rem;
   content: "Grid FTW!";
 }
+
+/*# sourceMappingURL=style.css.map */
