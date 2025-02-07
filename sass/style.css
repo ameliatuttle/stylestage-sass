@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
 :root {
   --color-primary: #ff5e00;
   --color-primary-alt: #fdd26f;
@@ -7,7 +7,7 @@
   --color-text: rgb(133.875, 77.525, 44.625);
   --color-light: #fff;
   --color-anchor: #ff5e00;
-  --font-family: "Handjet", serif;
+  --font-family: "Agbalumo", serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
   --font-size-h2: 3rem;
