@@ -212,7 +212,7 @@ nav ul a:hover::before, nav ul a:focus::before {
   opacity: 1;
 }
 nav ul li {
-  margin: 0.25rem;
+  margin: 10rem;
 }
 
 .features {
