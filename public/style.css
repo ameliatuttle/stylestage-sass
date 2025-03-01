@@ -186,6 +186,15 @@ article,
   list-style: none;
 }
 
+.link-github {
+  display: flex;
+  flex-direction: column;
+}
+
+svg {
+  width: 30%;
+}
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -212,7 +221,7 @@ nav ul a:hover::before, nav ul a:focus::before {
   opacity: 1;
 }
 nav ul li {
-  margin: 10rem;
+  margin: 1rem;
 }
 
 .features {
