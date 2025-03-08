@@ -1,4 +1,4 @@
-@import "utility/fonts";
+@import "global/fonts";
 
 // You can modify the theme directly, or override some of the variables
 // Overrides just need placed prior to the theme import
@@ -8,11 +8,11 @@
 @import "utility/logomark";
 @import "global/typography";
 @import "composition/body";
-@import "blocks/header";
-@import "blocks/nav";
+@import "composition/header";
+@import "composition/nav";
 @import "blocks/about";
 @import "blocks/guidelines";
 @import "blocks/contribute";
-@import "blocks/files";
+@import "utility/files";
 @import "global/styles";
-@import "blocks/footer";
+@import "composition/footer";
