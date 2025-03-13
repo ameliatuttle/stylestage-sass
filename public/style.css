@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap");
 :root {
-  --color-primary: #92c311;
+  --color-primary: #FF00FF;
   --color-primary-alt: #c0cb02;
   --color-secondary: #c5b12a;
   --color-background: #ecede2;
-  --color-text: rgb(88.2, 105.35, 43.05);
+  --color-text: #862d86;
   --color-light: #fff;
-  --color-anchor: #92c311;
+  --color-anchor: #FF00FF;
   --font-family: "Agbalumo", serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -284,7 +284,7 @@ nav ul li {
 }
 @media (min-width: 515px) and (max-width: 765px) {
   #styles .features li:nth-last-child(1):nth-child(odd),
-  .features.patterned li:nth-last-child(1):nth-child(odd) {
+.features.patterned li:nth-last-child(1):nth-child(odd) {
     grid-column: span 2;
   }
 }
@@ -311,5 +311,3 @@ nav ul li {
   font-size: 0.9rem;
   content: "Grid FTW!";
 }
-
-/*# sourceMappingURL=style.css.map */
