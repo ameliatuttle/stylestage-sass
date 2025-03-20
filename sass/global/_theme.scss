@@ -2,48 +2,56 @@
 @use "sass:map";
 @use "sass:string";
 
+
 $color-primary: #92c311 !default;
 $color-primary-alt: #c0cb02 !default;
 $color-secondary: #c5b12a !default;
 $color-background: #ecede2 !default;
 $brand-colors: (
-  primary: $color-primary,
-  primary-alt: $color-primary-alt,
-  secondary: $color-secondary,
+ primary: $color-primary,
+ primary-alt: $color-primary-alt,
+ secondary: $color-secondary,
 ) !default;
+
 
 // Updated: Use color.scale() instead of scale-color()
 $color-body: color.scale(
-  $color-primary,
-  $lightness: -30%,
-  $saturation: -50%
+ $color-primary,
+ $lightness: -30%,
+ $saturation: -50%
 ) !default;
+
 
 // Updated: Use color.mix() instead of mix()
 $color-gray: color.mix(#767676, $color-body, 70%) !default;
 
+
 // Updated: Use map.merge() instead of map-merge()
 $colors: map.merge(
-  $brand-colors,
-  (
-    background: $color-background,
-    text: $color-body,
-    light: #fff,
-  )
+ $brand-colors,
+ (
+   background: $color-background,
+   text: $color-body,
+   light: #fff,
+ )
 );
+
 
 // Updated: Use map.get() instead of map-get()
 @function color($key) {
-  @return map.get($colors, $key);
+ @return map.get($colors, $key);
 }
+
 
 // Updated: Use string.slice() instead of str-slice()
 @function svgColor($color) {
-  @return "%23" + string.slice("#{color($color)}", 2, -1);
+ @return "%23" + string.slice("#{color($color)}", 2, -1);
 }
+
 
 $link-color: color(primary) !default;
 $border-radius: 8px !default;
+
 
 $font-weight-strong: 500 !default;
 $font-size-h1: 6rem !default;
@@ -52,27 +60,32 @@ $font-size-h3: 2rem !default;
 $font-size-h4: 1.35rem !default;
 $font-size-text: 1.15rem !default;
 
+
 $font-sizes: (
-  h1: $font-size-h1,
-  h2: $font-size-h2,
-  h3: $font-size-h3,
-  h4: $font-size-h4,
-  text: $font-size-text,
+ h1: $font-size-h1,
+ h2: $font-size-h2,
+ h3: $font-size-h3,
+ h4: $font-size-h4,
+ text: $font-size-text,
 );
+
 
 // stylelint-disable
 :root {
-  @each $key, $color in $colors {
-    --color-#{$key}: #{$color};
-  }
+ @each $key, $color in $colors {
+   --color-#{$key}: #{$color};
+ }
 
-  --color-anchor: #{$link-color};
-  --font-family: "Agbalumo", serif;
-  --font-weight-strong: #{$font-weight-strong};
 
-  @each $key, $size in $font-sizes {
-    --font-size-#{$key}: #{$size};
-  }
+ --color-anchor: #{$link-color};
+ --font-family: "Agbalumo", serif;
+ --font-weight-strong: #{$font-weight-strong};
 
-  --border-radius: #{$border-radius};
+
+ @each $key, $size in $font-sizes {
+   --font-size-#{$key}: #{$size};
+ }
+
+
+ --border-radius: #{$border-radius};
 }

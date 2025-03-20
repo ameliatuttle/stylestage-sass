@@ -1,8 +1,18 @@
-.link-github {
+header {
     display: flex;
     flex-direction: column;
-}
-
-svg {
-    width: 30%;
-}
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .link-github {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+  }
+  
