@@ -1,18 +1,23 @@
+// base
+@import "global/variables";
+@import "global/mixins";
 @import "global/fonts";
-
-// You can modify the theme directly, or override some of the variables
-// Overrides just need placed prior to the theme import
-// For example:
-// $color-primary: #3a0;
 @import "global/theme";
-@import "utility/logomark";
 @import "global/typography";
+@import "global/styles";
+
+// layout
 @import "composition/body";
 @import "composition/header";
 @import "composition/nav";
+@import "composition/footer";
+
+// components
 @import "blocks/about";
 @import "blocks/guidelines";
 @import "blocks/contribute";
-@import "utility/files";
-@import "global/styles";
-@import "composition/footer";
+@import "blocks/files";
+
+// utilities
+@import "utility/logomark";
+@import "utility/links";

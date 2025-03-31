@@ -1,0 +1,197 @@
+// media queries
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-tablet + 1) {
+    @content;
+  }
+}
+
+// flexbox mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+// typography mixins
+@mixin heading-1 {
+  font-size: var(--font-size-h1);
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-lg;
+}
+
+@mixin heading-2 {
+  font-size: var(--font-size-h2);
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-md;
+}
+
+@mixin text-xs {
+  font-size: $font-size-xs;
+  line-height: $line-height-normal;
+}
+
+@mixin text-sm {
+  font-size: $font-size-sm;
+  line-height: $line-height-normal;
+}
+
+@mixin text-base {
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+}
+
+@mixin text-lg {
+  font-size: $font-size-lg;
+  line-height: $line-height-relaxed;
+}
+
+// container mixin
+@mixin container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: $container-padding;
+  box-sizing: border-box;
+}
+
+// button mixin
+@mixin button {
+  display: inline-block;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius-sm;
+  text-decoration: none;
+  transition: all $transition-speed $transition-timing;
+  cursor: pointer;
+}
+
+// card mixin
+@mixin card {
+  background: var(--color-background);
+  border-radius: $border-radius-md;
+  padding: $spacing-md;
+  box-shadow: $box-shadow-sm;
+}
+
+// animation mixins
+@mixin fade-in {
+  animation: fadeIn $transition-speed $transition-timing;
+}
+
+@mixin slide-in {
+  animation: slideIn $transition-speed $transition-timing;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+// scrollbar mixin
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: $border-radius-full;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-dark);
+  }
+}
+
+// fixed positioning mixins
+@mixin fixed-full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+@mixin fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+// utility mixins
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary-light);
+  border-radius: $border-radius-sm;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} 

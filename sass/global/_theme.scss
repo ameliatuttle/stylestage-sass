@@ -14,7 +14,6 @@ $brand-colors: (
 ) !default;
 
 
-// Updated: Use color.scale() instead of scale-color()
 $color-body: color.scale(
  $color-primary,
  $lightness: -30%,
@@ -22,11 +21,9 @@ $color-body: color.scale(
 ) !default;
 
 
-// Updated: Use color.mix() instead of mix()
 $color-gray: color.mix(#767676, $color-body, 70%) !default;
 
 
-// Updated: Use map.merge() instead of map-merge()
 $colors: map.merge(
  $brand-colors,
  (
@@ -37,13 +34,11 @@ $colors: map.merge(
 );
 
 
-// Updated: Use map.get() instead of map-get()
 @function color($key) {
  @return map.get($colors, $key);
 }
 
 
-// Updated: Use string.slice() instead of str-slice()
 @function svgColor($color) {
  @return "%23" + string.slice("#{color($color)}", 2, -1);
 }
@@ -70,7 +65,6 @@ $font-sizes: (
 );
 
 
-// stylelint-disable
 :root {
  @each $key, $color in $colors {
    --color-#{$key}: #{$color};
