@@ -1,12 +1,28 @@
 #guidelines {
   padding: 2rem;
-  background-color: var(--color-secondary);
-  color: #fff;
+  background-color: $color-secondary;
+  color: $color-light;
   border-radius: 10px;
+  margin-block: 4rem;
 }
 
 #guidelines h2 {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  font-family: $heading-font;
 }
-  
+
+#guidelines h3 {
+  font-family: $heading-font;
+}
+
+#guidelines p {
+  color: $color-light;
+}
+
+#guidelines a {
+  color: $color-light;
+}
+
+ 

@@ -1,48 +1,160 @@
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 2rem 1rem;
-  height: auto;
-  min-height: 4rem;
-  position: relative;
-  z-index: 2;
-  background-color: var(--color-background);
-}
+  background-color: $color-background;
+  padding: 4rem 2rem;
 
-.link-github {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-primary);
-  color: #fff;
-  padding: 0.75rem;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 2;
-  gap: 0.5rem;
-
-  svg {
-    width: 1em;
-    height: 1em;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
   }
 
-  &:hover {
-    background-color: var(--color-primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  h1 {
+    font-family: $heading-font;
+    font-size: clamp(8rem, 13.33vw, 13.33rem);
+    color: $color-secondary;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-family: $primary-font;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0 0 1rem;
+  }
+
+  p {
+    margin: 0 0 1.5rem;
+    font-family: $primary-font;
+
+    a {
+      color: $color-brown;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-brown;
+      }
+    }
+  }
+
+  .link-github {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: $color-secondary;
+    color: $color-light;
+    font-weight: 600;
+    border-radius: $border-radius;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    svg {
+      width: 1.25em;
+      height: 1.25em;
+      fill: $color-primary;
+    }
+
+    &:hover {
+      background-color: $color-primary;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
   }
 }
 
-@media (max-width: 768px) {
-  header {
-    padding: 1.5rem 1rem;
-    height: auto;
-    min-height: 4rem;
+// Desktop layout
+@media (min-width: 768px) {
+  header .container {
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+      "h1 h2"
+      "h1 p"
+      ". button";
+    align-items: start;
+    text-align: left;
+  }
+
+  header h1 {
+    grid-area: h1;
     position: relative;
-    z-index: 2;
+    font-size: 10rem;
+    padding-right: 10rem;
+    margin-left: 8rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 8px;
+      height: 100%;
+      background-color: $color-secondary;
+    }
+  }
+
+  header h2 {
+    grid-area: h2;
+    margin-left: 1rem;
+    text-align: left;
+    margin: 0;
+  }
+
+  header p {
+    grid-area: p;
+    margin-left: 1rem;
+    text-align: left;
+    margin: 16.75rem 0 0;
+
+  }
+
+  header .link-github {
+    grid-area: button;
+    justify-self: left;
+    margin-top: 2rem;
+    margin-left: 1rem;
+
   }
 }
-  
+
+// Mobile layout
+@media (max-width: 767px) {
+  header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  header h1 {
+    font-size: 5rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80%;
+      max-width: 25rem;
+      height: 4px;
+      background-color: $color-secondary;
+      margin: 2rem auto 0;
+    }
+  }
+
+  header h2,
+  header p,
+  header .link-github {
+    max-width: 40ch;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header .link-github {
+    align-self: center;
+    margin-top: 1.5rem;
+  }
+}

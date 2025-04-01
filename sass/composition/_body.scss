@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -9,11 +10,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: var(--font-family);
+  background-color: $color-background;
+  background-image: url(#{$lime-slice-pattern});
+  background-repeat: repeat;
+  background-size: 40px 20px; // controls size of each lime slice
+  background-position: center;
+  font-family: $primary-font;
+  color: $color-brown;
   min-height: 100vh;
   position: relative;
+}
+
+body h2,
+h4 {
+  color: $color-secondary;
+  font-family: $heading-font;
+  margin-bottom: 4rem;
+}
+
+.profile {
+  border-top: 3px solid $color-primary;
+  border-bottom: 3px solid $color-primary;
+  padding: 4rem;
+  margin-block: 3rem;
 }
 
 .container {

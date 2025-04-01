@@ -1,14 +1,13 @@
 .page-footer {
   @include flex-center;
   @include flex-column;
-  background-color: var(--color-secondary);
-  color: #fff;
+  background-color: $color-secondary;
+  color: $color-light;
   padding: 2rem 1rem;
   margin-top: 3rem;
   text-align: center;
   gap: 1rem;
   min-height: 4rem;
-  border-radius: 10px;
 
   .container {
     @include flex-center;
@@ -22,6 +21,7 @@
     margin: 0;
     font-size: 0.875rem;
     line-height: 1.5;
+    color: $color-light;
   }
 
   ul {
@@ -39,7 +39,7 @@
   }
 
   a {
-    color: #fff;
+    color: $color-light;
     text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 500;
@@ -58,6 +58,7 @@
     svg {
       width: 1em;
       height: 1em;
+      fill: $color-primary;
     }
   }
 }
@@ -66,7 +67,6 @@
   .page-footer {
     padding: 1.5rem 1rem;
     margin-top: 2rem;
-    border-radius: 8px;
 
     p {
       font-size: 0.8125rem;

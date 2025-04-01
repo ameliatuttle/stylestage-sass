@@ -1,6 +1,21 @@
 #contribute {
   padding: 2rem;
-  background-color: var(--color-background);
-  border-radius: 10px;
+  background-color: $color-light;
+  border-radius: $border-radius;
 }
-  
+
+#contribute h2 {
+  border-radius: $border-radius;
+  font-family: $heading-font;
+  margin-bottom: 4rem;
+}
+ 
+#contribute h3 {
+  font-family: $heading-font;
+  margin-bottom: 4rem;
+  color: $color-secondary;
+}
+
+#contribute li {
+  color: $color-brown;
+}
