@@ -1,6 +1,7 @@
 header {
   background-color: $color-background;
   padding: 4rem 2rem;
+  width: 100%;
 
   .container {
     max-width: 1200px;
@@ -19,7 +20,7 @@ header {
 
   h2 {
     font-family: $primary-font;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 400;
     margin: 0 0 1rem;
   }
@@ -99,14 +100,15 @@ header {
     grid-area: h2;
     margin-left: 1rem;
     text-align: left;
-    margin: 0;
-  }
+    margin-top: 6rem;
+    margin-bottom: 0;
+    }
 
   header p {
     grid-area: p;
     margin-left: 1rem;
     text-align: left;
-    margin: 16.75rem 0 0;
+    margin: 1rem 0 0;
 
   }
 

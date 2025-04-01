@@ -1,3 +1,5 @@
+$lime-slice-pattern: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50' width='20' height='10'%3E%3Cpath d='M0,0 A50,50 0 0,0 100,0' fill='%2392c311'/%3E%3C/svg%3E";
+
 html,
 body {
   margin: 0;
@@ -11,14 +13,40 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: $color-background;
-  background-image: url(#{$lime-slice-pattern});
-  background-repeat: repeat;
-  background-size: 40px 20px; // controls size of each lime slice
-  background-position: center;
   font-family: $primary-font;
   color: $color-brown;
   min-height: 100vh;
   position: relative;
+  z-index: 0;
+}
+
+// 🍋 Desktop-only background with original pattern and fade
+@media (min-width: 768px) {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cg transform='rotate(0 20 20)'%3E%3Cpath d='M5,5 A15,15 0 0,0 35,5' fill='%2392c311'/%3E%3C/g%3E%3Cg transform='rotate(180 60 60)'%3E%3Cpath d='M45,45 A15,15 0 0,0 75,45' fill='%2392c311'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 80px 80px; // ✅ exact original tile size
+    background-position: center;
+    opacity: 0;
+    animation: limeFade 3s ease-in-out infinite alternate; // ⚡️ a little quicker
+    pointer-events: none;
+  }
+}
+
+@keyframes limeFade {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.25;
+  }
 }
 
 body h2,
