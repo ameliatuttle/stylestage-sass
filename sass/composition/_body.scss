@@ -40,6 +40,22 @@ body {
   }
 }
 
+// Accessibility: Disable animations
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  body::before {
+    animation: none !important;
+  }
+}
+
+
 @keyframes limeFade {
   0% {
     opacity: 0.1;
